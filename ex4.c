@@ -1,6 +1,14 @@
 //write two functions that finds the maximum and minimum of three numbers
 #include <stdio.h>
 #include <stdlib.h>
+int max(int a, int b, int c)
+{
+    return (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+}
+int min(int a, int b, int c)
+{
+    return (a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);
+}
 int main()
 {
     int a, b, c;
@@ -9,8 +17,4 @@ int main()
     printf("The maximum of %d, %d, and %d is: %d\n", a, b, c, max(a,b,c));
     printf("The minimum of %d, %d, and %d is: %d\n", a, b, c, min(a,b,c));
     return 0;
-}
-int max(int a, int b, int c)
-{
-    return (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
 }
